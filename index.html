@@ -92,18 +92,18 @@
             font-weight: 300;
         }
 
-       <!-- Galería de fotos con nuestras imágenes -->
-<div class="gallery">
-    <div class="photo-card"><img src="WhatsApp Image 2026-10-08 at 2.23.37 PM.jpeg" alt="Luna"></div>
-    <div class="photo-card"><img src="WhatsApp Image 2026-10-08 at 2.23.37 PM (1).jpeg" alt="Luna y tú"></div>
-    <div class="photo-card"><img src="WhatsApp Image 2026-10-08 at 2.23.37 PM (2).jpeg" alt="Luna y tú"></div>
-    <div class="photo-card"><img src="WhatsApp Image 2026-10-08 at 2.23.37 PM (3).jpeg" alt="Luna y tú"></div>
-    <div class="photo-card"><img src="WhatsApp Image 2026-10-08 at 2.23.37 PM (4).jpeg" alt="Luna"></div>
-</div>
+        /* Galería de fotos */
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
 
         .photo-card {
-            width: 130px;
-            height: 130px;
+            width: 110px;
+            height: 110px;
             border-radius: 15px;
             overflow: hidden;
             border: 2px solid #ffb6c1;
@@ -146,7 +146,6 @@
             margin-top: 20px;
         }
 
-        /* Botón interactivo de amor */
         .love-btn {
             background: linear-gradient(45deg, #ff416c, #ff4b2b);
             border: none;
@@ -184,10 +183,13 @@
         <h1>Para mi hermosa Luna 🌙</h1>
         <p class="subtitle">El amor y la mujer de mi vida entera</p>
 
-        <!-- Galería de fotos con las imágenes que enviaste -->
+        <!-- Galería de fotos con tus imágenes subidas -->
         <div class="gallery">
-            <div class="photo-card"><img src="https://lh3.googleusercontent.com/a/ACg8ocKwj0r0UeQ5R0u9V... (temporal)" alt="Luna y tú" onerror="this.src='https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=300'"></div>
-            <!-- Nota: Usamos las imágenes integradas -->
+            <div class="photo-card"><img src="WhatsApp Image 2026-10-08 at 2.23.37 PM.jpeg" alt="Luna"></div>
+            <div class="photo-card"><img src="WhatsApp Image 2026-10-08 at 2.23.37 PM (1).jpeg" alt="Luna y tú"></div>
+            <div class="photo-card"><img src="WhatsApp Image 2026-10-08 at 2.23.37 PM (2).jpeg" alt="Luna y tú"></div>
+            <div class="photo-card"><img src="WhatsApp Image 2026-10-08 at 2.23.37 PM (3).jpeg" alt="Luna y tú"></div>
+            <div class="photo-card"><img src="WhatsApp Image 2026-10-08 at 2.23.37 PM (4).jpeg" alt="Luna"></div>
         </div>
 
         <div class="letter-content">
@@ -203,7 +205,6 @@
     </div>
 
     <script>
-        // Crear corazones flotantes automáticamente
         function createHeart() {
             const heart = document.createElement('div');
             heart.classList.add('heart');
@@ -220,7 +221,6 @@
 
         setInterval(createHeart, 300);
 
-        // Mostrar mensaje secreto al hacer clic
         function revealMessage() {
             const msg = document.getElementById('hidden-message');
             msg.style.display = 'block';
